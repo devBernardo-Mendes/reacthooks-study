@@ -52,6 +52,9 @@ const UseRef = (props) => {
                     onChange={e => setvalue2(e.target.value)}
                 />
             </div>
+            <div className="ce">
+                
+            </div>
         </div>
     )
 }
