@@ -12,9 +12,6 @@ const UseCallback = (props) => {
             <div className="center">
                 <span className="text">{count}</span>
             </div>
-            <div className="center">
-                <div className="text">{count}</div>
-            </div>
         </div>
     )
 }
