@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react'
+import React, { useState, useMemo} from 'react'
 import PageTitle from '../../components/layout/PageTitle'
 
 function sum(a, b) {
@@ -33,3 +33,4 @@ const UseMemo = (props) => {
 }
 
 export default UseMemo
+// retorna uma valor cacheada
