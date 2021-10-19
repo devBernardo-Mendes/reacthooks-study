@@ -1,40 +1,32 @@
-import React from "react";
-import { useContext } from "react";
+import React, { useState } from "react";
 
-import PageTitle from "../../components/layout/PageTitle";
-import DataContext from "../../data/DataContext";
+const initialState = {
+  number: 1234,
+  text: "Context API + Hooks",
+};
 
-const UseContext = (props) => {
-  const { state, setState } = useContext(DataContext);
+const AppContenxt = React.createContext(initialState);
 
-  function addNumber(delta) {
+const Store = (props) => {
+  const [state, setState] = useState(initialState);
+
+  function updateState(key, value) {
+    
     setState({
       ...state,
-      number: state.number + delta,
     });
   }
 
   return (
-    <div className="UseContext">
-      <PageTitle
-        title="Hook UseContext"
-        subtitle="Aceita um objeto de contexto e retorna o valor atual do contexto!"
-      />
-      <div className="center">
-        <span className="text">{state.text}</span>
-        <span className="text">{state.number}</span>
-
-        <div>
-          <buton className="btn" onClick={() => addNumber(-1)}>
-            -1
-          </buton>
-          <buton className="btn" onClick={() => addNumber(1)}>
-            +1
-          </buton>
-        </div>
-      </div>
-    </div>
+    <AppContenxt.Provider
+      value={{
+        number: state.number,
+        text: state.text,
+      }}
+    >
+      <div>{props.children}</div>
+    </AppContenxt.Provider>
   );
 };
 
-export default UseContext;
+export default Store;
