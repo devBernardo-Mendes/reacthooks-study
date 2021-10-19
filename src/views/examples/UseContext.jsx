@@ -17,11 +17,14 @@ const UseContext = (props) => {
 
   const { number, text, setNumber, setText } = useContext(AppContenxt);
 
-  useEffect(function () {
-    if (number > 1250) {
-      setText("Eita");
-    }
-  }, [number, setText]);
+  useEffect(
+    function () {
+      if (number > 1250) {
+        setText("Eita");
+      }
+    },
+    [number, setText]
+  );
 
   return (
     <div className="UseContext">

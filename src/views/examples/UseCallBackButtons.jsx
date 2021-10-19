@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import React from "react";
 
-const UseCallBackButtons = props => {
+const UseCallBackButtons = (props) => {
   return (
     <div>
       <buton className="btn" onClick={() => props.inc(6)}>
