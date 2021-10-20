@@ -1,6 +1,11 @@
 import React from "react";
 import PageTitle from "../../components/layout/PageTitle";
 
+const initialState = {
+  other: "...",
+  number: 0,
+};
+
 const UseReducer = (props) => {
   return (
     <div className="UseReducer">
