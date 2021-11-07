@@ -16,7 +16,6 @@ const Store = (props) => {
       [key]: value,
     });
   }
-
   return (
     <AppContenxt.Provider
       value={{
