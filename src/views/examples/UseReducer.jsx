@@ -1,6 +1,6 @@
 import React, { useReducer } from "react";
 import PageTitle from "../../components/layout/PageTitle";
-import {initialState, reducer} from "../../store/config"
+import {initialState, reducer} from "../../store"
 
 
 const UseReducer = (props) => {
@@ -28,7 +28,7 @@ const UseReducer = (props) => {
           </button>
           <button
             className="btn"
-            onClick={() => dispatch({ type: "number_add2" })}
+            onClick={() => dispatch({ type: "numberAdd2" })}
           >
             +2
           </button>
