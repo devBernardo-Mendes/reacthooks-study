@@ -1,4 +1,4 @@
-import "./PageTitle.css";
+import "./PageTitle.scss";
 import React from "react";
 
 const PageTitle = (props) => (

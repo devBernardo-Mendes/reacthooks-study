@@ -1,4 +1,4 @@
-import "./SectionTitle.css";
+import "./SectionTitle.scss";
 import React from "react";
 
 const SectionTitle = (props) => (
